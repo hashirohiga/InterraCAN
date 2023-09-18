@@ -3,11 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:VisualElements="clr-namespace:LiveChartsCore.SkiaSharpView.VisualElements;assembly=LiveChartsCore.SkiaSharpView" x:Class="WpfApp1.MainWindow"
+        xmlns:lvcore="clr-namespace:LiveChartsCore;assembly=LiveChartsCore"
+        xmlns:VisualElements="clr-namespace:LiveChartsCore.SkiaSharpView.VisualElements;assembly=LiveChartsCore.SkiaSharpView" xmlns:SKCharts="clr-namespace:LiveChartsCore.SkiaSharpView.SKCharts;assembly=LiveChartsCore.SkiaSharpView" xmlns:lvc1="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Name="window" x:Class="WpfApp1.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
+
     <Grid>
         <TabControl>
             <TabItem
@@ -146,45 +148,113 @@
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Top"
                                         />
+                                    <!--chart0-->
                                     <lvc:CartesianChart
-                                        Series="{Binding Series}">
-                                        <lvc:CartesianChart.Title>
-                                            <VisualElements:LabelVisual
-                                                Text="0"/>
-                                        </lvc:CartesianChart.Title>
+                                        
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte0"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
                                     </lvc:CartesianChart>
-
+                                    <!--chart1-->
                                     <lvc:CartesianChart
                                         Grid.Column="1"
-                                        Series="{Binding Series}"/>
-
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte1"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart2-->
                                     <lvc:CartesianChart
                                         Grid.Column="2"
-                                        Series="{Binding Series}"/>
-
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte2"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart3-->
                                     <lvc:CartesianChart
                                         Grid.Column="3"
-                                        Series="{Binding Series}"/>
-
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte3"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart4-->
                                     <lvc:CartesianChart
-                                        Grid.Column="0"
                                         Grid.Row="1"
-                                        Series="{Binding Series}"/>
-
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte4"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart5-->
                                     <lvc:CartesianChart
                                         Grid.Column="1"
                                         Grid.Row="1"
-                                        Series="{Binding Series}"/>
-
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte5"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart6-->
                                     <lvc:CartesianChart
                                         Grid.Column="2"
                                         Grid.Row="1"
-                                        Series="{Binding Series}"/>
-
-                                    <lvc:CartesianChart 
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte6"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
+                                    <!--chart7-->
+                                    <lvc:CartesianChart
                                         Grid.Column="3"
                                         Grid.Row="1"
-                                        Series="{Binding Series}"/>
+                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
+                                        <lvc:CartesianChart.Series>
+                                            <lvc:LineSeries 
+                                               Name="LineByte7"
+                                               PointGeometry="{x:Null}"
+                                               StrokeThickness="0.2"
+                                               LineSmoothness="0"
+                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
+                                        </lvc:CartesianChart.Series>
+                                    </lvc:CartesianChart>
 
                                 </Grid>
                             </TabItem>
