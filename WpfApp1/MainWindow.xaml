@@ -3,12 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    xmlns:ProEssentials="clr-namespace:Gigasoft.ProEssentials;assembly=Gigasoft.ProEssentialsWpf" x:Class="WpfApp1.MainWindow"
         xmlns:local="clr-namespace:WpfApp1"
-        xmlns:lvcore="clr-namespace:LiveChartsCore;assembly=LiveChartsCore"
-        xmlns:VisualElements="clr-namespace:LiveChartsCore.SkiaSharpView.VisualElements;assembly=LiveChartsCore.SkiaSharpView" xmlns:SKCharts="clr-namespace:LiveChartsCore.SkiaSharpView.SKCharts;assembly=LiveChartsCore.SkiaSharpView" xmlns:lvc1="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" x:Name="window" x:Class="WpfApp1.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="1000">
+        Title="MainWindow" Height="450" Width="1000"
+        WindowStartupLocation="CenterScreen">
 
     <Grid>
         <TabControl>
@@ -36,7 +35,7 @@
                                 Content="кБод"/>
                         </StackPanel>
                         <TextBox
-                        Height="350"
+                        Height="580"
                         Width="300"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Top"
@@ -107,7 +106,8 @@
                 </Grid>
             </TabItem>
             <TabItem
-                Header="Анализ">
+                Header="Анализ"
+                Name="Tab_Charts">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
@@ -125,13 +125,14 @@
 
                         <ListBox
                          x:Name="LB_Uniq"
-                         SelectionChanged="Lb_Uniq_SelectionChanged"  
+                         SelectionChanged="Lb_Uniq_SelectionChanged"
                             />
                         <TabControl
                             Grid.Column="1">
                             <TabItem
                                 Header="график побайтно">
                                 <Grid>
+                                    <!--Width="1800"-->
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition/>
@@ -149,118 +150,163 @@
                                         VerticalAlignment="Top"
                                         />
                                     <!--chart0-->
-                                    <lvc:CartesianChart
-                                        
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte0"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart1-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="1"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte1"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart2-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="2"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte2"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart3-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="3"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte3"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                                ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart4-->
-                                    <lvc:CartesianChart
-                                        Grid.Row="1"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte4"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart5-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="1"
-                                        Grid.Row="1"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte5"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart6-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="2"
-                                        Grid.Row="1"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte6"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
-                                    <!--chart7-->
-                                    <lvc:CartesianChart
-                                        Grid.Column="3"
-                                        Grid.Row="1"
-                                        Hoverable="False" DisableAnimations="True"  IsMocked="True" IsManipulationEnabled="True">
-                                        <lvc:CartesianChart.Series>
-                                            <lvc:LineSeries 
-                                               Name="LineByte7"
-                                               PointGeometry="{x:Null}"
-                                               StrokeThickness="0.2"
-                                               LineSmoothness="0"
-                                               ToolTip="{x:Null}" OverridesDefaultStyle="False"/>
-                                        </lvc:CartesianChart.Series>
-                                    </lvc:CartesianChart>
+                                    <ProEssentials:PegoWpf
+                                        Name="LineByte0"
+                                        PeDataHotSpot="LineByte0_PeDataHotSpot"
+                                        />
+                                    <Label
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
 
+                                    <!--chart1-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="1"
+                                        Name="LineByte1"
+                                        PeDataHotSpot="LineByte1_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+
+                                    <!--chart2-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="2"
+                                        Name="LineByte2"
+                                        PeDataHotSpot="LineByte2_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="2"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+                                    
+                                    <!--</lvc:CartesianChart>-->
+                                    <!--chart3-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="3"
+                                        Name="LineByte3"
+                                        PeDataHotSpot="LineByte3_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="3"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+                                    
+                                    <!--chart4-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Row="1"
+                                        Name="LineByte4"
+                                        PeDataHotSpot="LineByte4_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+                                    
+                                    <!--chart5-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        Name="LineByte5"
+                                        PeDataHotSpot="LineByte5_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+                                    
+                                    <!--chart6-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="2"
+                                        Grid.Row="1"
+                                        Name="LineByte6"
+                                        PeDataHotSpot="LineByte6_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="2"
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"/>
+                                    
+                                    <!--chart7-->
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="3"
+                                        Grid.Row="1"
+                                        Name="LineByte7"
+                                        PeDataHotSpot="LineByte7_PeDataHotSpot"/>
+                                    <Label
+                                        Grid.Column="3"
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"
+                                        />
+                                    
+                                </Grid>
+                                <!--</ScrollViewer>-->
+                            </TabItem>
+                            <TabItem Header="график 2x little endian">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <ProEssentials:PegoWpf
+                                        Name="LineByte01LE"/>
+                                    <Label
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"
+                                        />
+                                    
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="1"
+                                        Name="LineByte23LE"/>
+                                    <Label
+                                        Grid.Column="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"
+                                        />
+
+                                    <ProEssentials:PegoWpf
+                                        Grid.Row="1"
+                                        Name="LineByte45LE"/>
+                                    <Label
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"
+                                        />
+
+                                    <ProEssentials:PegoWpf
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        Name="LineByte67LE"/>
+                                    <Label
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        VerticalAlignment="Bottom"
+                                        Height="18"
+                                        Background="White"
+                                        />
                                 </Grid>
                             </TabItem>
-                            <TabItem Header="график 2x little endian"/>
                             <TabItem Header="график 2x big endian"/>
-                            <TabItem Header="Сообщения"/>
+                            <TabItem Header="Сообщения"
+                                     Name="Tab_Msg">
+                                <ListBox
+                                    Width="300"
+                                    Name="LB_Messages"
+                                    HorizontalAlignment="Left"/>
+                                
+                            </TabItem>
                             <TabItem Header="График произвольный"/>
                         </TabControl>
                     </Grid>
